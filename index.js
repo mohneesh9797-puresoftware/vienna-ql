@@ -7,8 +7,8 @@ MongoClient.connect(
   { useNewUrlParser: true },
   function(err, client) {
     client
-      .db("beverages")
-      .collection("companies")
+      .db(process.env["DB_NAME"])
+      .collection(process.env["COLL_NAME"])
       .find()
       .toArray(function(err, result) {
         console.log(result);
