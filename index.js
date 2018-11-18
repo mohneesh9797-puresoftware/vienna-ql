@@ -14,12 +14,8 @@ MongoClient.connect(
     client
       .db(process.env["DB_NAME"])
       .collection(process.env["COLL_NAME"])
-      .find({ "brands.alcohol": true }) //TODO
-      .forEach(function(elem) {
-        elem.brands
-          //.filter(({ alcohol }) => alcohol)
-          .forEach(({ name }) => console.log(name));
-      });
+      .find({ $and: [{ "brands.alcohol": true }, { name: "Almdudler" }] })
+      .forEach(elem => console.log(elem));
 
     client.close();
   }
