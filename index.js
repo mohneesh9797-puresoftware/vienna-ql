@@ -1,3 +1,1 @@
-const obj = require("./src/run");
-
-obj.run();
+require("./src/run").run();
