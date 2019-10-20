@@ -1,11 +1,14 @@
 language: node_js
 node_js:
+  - 12
   - 11
   - 10
-  - 9
 os:
   - linux
   - osx
+arch:
+  - amd64
+  - arm64
 notifications:
 email: false
 script:
