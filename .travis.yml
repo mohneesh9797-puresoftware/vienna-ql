@@ -8,6 +8,7 @@ os:
   - osx
 arch:
   - amd64
+  - arm64
 notifications:
 email: false
 script:
