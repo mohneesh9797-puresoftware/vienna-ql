@@ -1,12 +1,9 @@
 language: node_js
 node_js:
   - 12
-  - 11
-  - 10
 os:
   - linux
-  - osx
-arch:
+  arch:
   - amd64
   - arm64
 notifications:
